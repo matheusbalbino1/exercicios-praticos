@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Diferenciado</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    body{
+        margin:50px;
+    }
+    label{
+        display:flex;
+        margin-bottom:40px;
+        align-items: end;
+        
+    }
+    input{
+        display:none;
+    }
+
+    span{
+        display:flex;
+        width:5em;
+        height:2em;
+        background:#ccc;      
+        border:1px solid gray;
+        border-radius: 1em 1em 1em 1em; 
+        align-items: center;
+       }
+    div{
+        width:1.5em;
+        height:1.5em;
+        background:rgb(240, 240, 240);
+        border-radius:100%;
+        margin-left:.25em;
+        display:inline-block;
+        transition: transform 0.5s;
+    }
+    label *{
+        margin-right:10px;
+    }
+    label input:checked + span div{
+        transform: translateX(3em);
+        background:rgb(61, 61, 61);
+    }
+    
+    </style>
+</head>
+<body>
+    <label for="esporte"><input type="checkbox" id="esporte"><span><div></div></span>Esporte</label>
+    <label for="politica"><input type="checkbox" id="politica"><span><div></div></span>Política</label>
+    <label for="educacao"><input type="checkbox" id="educacao"><span><div></div></span>Educação</label>
+</body>
+</html>
